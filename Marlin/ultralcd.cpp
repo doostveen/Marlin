@@ -826,13 +826,13 @@ void lcd_init()
     WRITE(SHIFT_LD,HIGH);
   #endif
 #else
-    pinMode(SHIFT_CLK,OUTPUT);
-    pinMode(SHIFT_LD,OUTPUT);
-    pinMode(SHIFT_EN,OUTPUT);
-    pinMode(SHIFT_OUT,INPUT);
-    WRITE(SHIFT_OUT,HIGH);
-    WRITE(SHIFT_LD,HIGH); 
-    WRITE(SHIFT_EN,LOW);
+   // pinMode(SHIFT_CLK,OUTPUT);
+   // pinMode(SHIFT_LD,OUTPUT);
+   // pinMode(SHIFT_EN,OUTPUT);
+   // pinMode(SHIFT_OUT,INPUT);
+   // WRITE(SHIFT_OUT,HIGH);
+   // WRITE(SHIFT_LD,HIGH); 
+   // WRITE(SHIFT_EN,LOW);
 #endif//!NEWPANEL
 #if (SDCARDDETECT > 0)
     WRITE(SDCARDDETECT, HIGH);

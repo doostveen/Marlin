@@ -1264,6 +1264,17 @@ void process_commands()
         fanSpeed = 0;
         break;
     #endif //FAN_PIN
+    #if FAN2_PIN > -1
+     case 806: //M806 Fan2 On
+       if (code_seen('S')){
+       analogWrite(6, constrain(code_value(),0,255));} //D6 is fan2_pin as in pins.h
+       else {
+         analogWrite(6, 255);}
+       break;
+     case 807: //M607 Fan2 Off
+       analogWrite(6, 0);
+       break;
+   #endif //FAN2_PIN
     #ifdef BARICUDA
       // PWM for HEATER_1_PIN
       #if defined(HEATER_1_PIN) && HEATER_1_PIN > -1

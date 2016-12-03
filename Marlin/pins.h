@@ -1868,6 +1868,23 @@
  
  #define BEEPER 64	
  
+ // DVO added support for servos. Check PIN!
+#ifdef NUM_SERVOS
+    #define SERVO0_PIN         44 //orig 11, however I use Megatronics AUX4 pin 44
+
+    #if NUM_SERVOS > 1
+      #define SERVO1_PIN         6 
+    #endif
+
+    #if NUM_SERVOS > 2
+      #define SERVO2_PIN         5
+    #endif
+
+    #if NUM_SERVOS > 3
+      #define SERVO3_PIN         4
+    #endif
+#endif
+ 
  
  #define LCD_PINS_RS 14
  #define LCD_PINS_ENABLE 15
